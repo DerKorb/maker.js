@@ -158,6 +158,11 @@ namespace MakerJs {
          * The anchor line's endpoints may be omitted, in which the case the text will always remain non-angled, even if the model is rotated.
          */
         anchor: IPathLine;
+
+        /**
+         * Caption Font Size
+         */
+        fontSize?: number;
     }
 
     //models

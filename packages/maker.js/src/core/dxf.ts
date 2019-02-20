@@ -155,7 +155,7 @@ namespace MakerJs.exporter {
                     x: round(center[0], opts.accuracy),
                     y: round(center[1], opts.accuracy)
                 },
-                height: opts.fontSize,
+                height: caption.fontSize ? caption.fontSize : opts.fontSize,
                 text: caption.text,
                 attachmentPoint: 5, //5 = Middle center
                 drawingDirection: 1, //1 = Left to right

@@ -8,14 +8,14 @@ namespace MakerJs.model {
      * @param rightAnchorPoint Optional Point on right side middle of text.
      * @returns The original model (for cascading).
      */
-    export function addCaption(modelContext: IModel, text: string, leftAnchorPoint?: IPoint, rightAnchorPoint?: IPoint) {
+    export function addCaption(modelContext: IModel, text: string, leftAnchorPoint?: IPoint, rightAnchorPoint?: IPoint, fontSize?: number) {
         if (!leftAnchorPoint) {
             leftAnchorPoint = point.zero();
         }
         if (!rightAnchorPoint) {
             rightAnchorPoint = point.clone(leftAnchorPoint);
         }
-        modelContext.caption = { text, anchor: new paths.Line(leftAnchorPoint, rightAnchorPoint) };
+        modelContext.caption = { text, anchor: new paths.Line(leftAnchorPoint, rightAnchorPoint), fontSize };
         return modelContext;
     }
 
